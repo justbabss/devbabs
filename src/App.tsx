@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w-full h-screen overflow-auto px-5 py-5 sm:px-3 sm:py-5 md:overflow-hidden`}>
+      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w- scroll-smooth h-screen overflow-auto px-5 pt-5 sm:px-3 sm:py-5 md:overflow-hidden`}>
         <nav className='flex justify-between p-4'>
           <a href="/">
             <img className="w-9 cursor-pointer bg-black rounded-[10rem]" src={Logo} alt="Logo" />
