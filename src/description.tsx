@@ -9,6 +9,7 @@ import git from './assets/svgs/git.svg';
 import github from './assets/svgs/github.svg';
 import avatar from './assets/images/Avatar.png'
 import cv from './assets/Rotimi\'s CV.pdf';
+
 function Description() {
     const [show, setShow] = useState(false);
     const mainRef = useRef(null);
@@ -64,17 +65,20 @@ function Description() {
                 <>
                     <section className="flex flex-col md:flex-row items-center justify-between sm:mt-[0rem]">
                         <div className="order-2 md:order-1 sm:order-1">
-                            <h1 className="sm:text-4xl sm:ml-8 sm:mt-12 font-semibold mt-5 md:mt-[5rem] md:ml-2 text-[1.8rem] ">Hi, I'm Rotimi Babalola.</h1>
+                            <h1 className="sm:text-4xl sm:ml-8 sm:mt-12 font-semibold mt-5 md:mt-[4rem] md:ml-2 text-[1.8rem] ">Hi, I'm Rotimi Babalola.</h1>
                             <h1 className="sm:text-4xl sm:ml-8 sm:mt-5 font-semibold md:inline md:ml-2 md:mt-2 text-[1.8rem] mt-1">UX Designer</h1>
                             <h1 className="sm:text-4xl sm:ml-8 sm:mt-5 font-semibold md:inline md:ml-2 text-[1.8rem] mt-1">and Developer.</h1>
                             <p className=" text-[1.2rem] sm:ml-8 w-[22rem] mt-4 sm:w-[40rem] md:w-[45rem] md:ml-2">
                                 I design, create, maintain websites and web applications
                                 using a combination of programming languages, frameworks, and tools.
                                 I build dynamic and interactive websites that can be accessible by clients &
-                                users from anywhere around the world. <br /> <br />
-                                I like to <a href="https://twitter.com/devbabss" target="_blank" className='text-[#1DA1F2] underline'>tweet</a> about tech and stuffs, 
-                                while pushing <a href="https://github.com/justbabss" target="_blank" className='text-[#71797E] underline'>codes</a> for open source collaborations,
-                                also managing one to view <a href="https://instagram.com/dev.babss" target="_blank" className=' text-[#FF007F] underline' >reels</a> but hey don't forget to check my <a href="https://www.linkedin.com/in/rotimi-babalola-a41768248/" target="_blank" className=' text-[#0077b5] underline'>professional summary</a> for networking. 
+                                users from anywhere around the world. 
+                                <p className=' mt-4'>
+                                    I like to <a href="https://twitter.com/devbabss" target="_blank" className='text-[#1DA1F2] border-b-2 border-[#1DA1F2]'>tweet</a> about tech and stuffs,
+                                    while pushing <a href="https://github.com/justbabss" target="_blank" className='text-[#71797E] border-b-2 border-[#71797E]'>codes</a> for open source collaborations,
+                                    also managing one to view <a href="https://instagram.com/dev.babss" target="_blank" className=' text-[#FF007F] border-b-2 p-[0.0rem] border-[#FF007F]' >reels</a> but hey don't forget to check my <a href="https://www.linkedin.com/in/rotimi-babalola-a41768248/" target="_blank" className=' text-[#0077b5] border-b-2 border-[#0077b5]'>professional</a> summary for networking.
+                                </p>
+                               <p className='mt-4'>Explore my previous works and collaborations by clicking on <a href="" className='text-[#50C878] border-b-2 border-[#50C878]'>Projects</a></p>
                             </p>
                         </div>
 
@@ -84,7 +88,7 @@ function Description() {
                     </section>
 
                     <button 
-                    className={`${darkMode ? 'border-white' : 'border-black'} border-2 border-black text-[1.3rem] mt-[2rem] md:mt-6 md:ml-2 p-2 sm:mt-[17rem] transition-transform hover:scale-110`}
+                    className={`${darkMode ? 'border-white' : 'border-black'} border-2 border-black text-[1.3rem] mt-[1rem] md:mt-6 md:ml-2 p-2 sm:mt-[17rem] transition-transform hover:scale-110`}
                     onClick={toggleDarkMode}>
                     <a href={cv} download>Download CV</a>
                     </button>

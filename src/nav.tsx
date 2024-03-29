@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import Description from './description';
-import Nav from './nav';
+import Logo from './assets/svgs/favico.svg';
 
-function App() {
+function Nav() {
   // Initialize state with the value from local storage if it exists, otherwise default to false
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true');
 
@@ -29,14 +28,20 @@ function App() {
 
   return (
     <>
-      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w-full scroll-smooth h-screen overflow-auto px-2 pt-5 sm:px-7 sm:py-5 md:px-12 md:overflow-hidden`}>
-        <div onClick={toggleDarkMode}><Nav/></div>
-        <div className={`${darkMode ? 'text-white' : 'text-black'}`}>
-          <Description />
-        </div>
-      </section>
+        <nav className='flex justify-between p-0'>
+          <a href="/">
+            <img className="w-9 cursor-pointer bg-black rounded-[10rem]" src={Logo} alt="Logo" />
+          </a>
+          <div className={` cursor-pointer ${darkMode ? 'text-white' : 'text-black'}`} onClick={toggleDarkMode}>
+            {darkMode ? (
+              <p className='text-[1.2rem] font-semibold text-[#fff]'>Light Mode</p>
+            ) : (
+              <p className='text-[1.2rem] font-semibold text-[#000]'>Dark Mode</p>
+            )}
+          </div>
+        </nav>
     </>
   );
 }
 
-export default App;
+export default Nav;
