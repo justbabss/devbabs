@@ -84,7 +84,7 @@ export default function Works() {
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-justify md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showMhi ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -110,7 +110,7 @@ export default function Works() {
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-justify md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showGeekops ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -136,7 +136,7 @@ export default function Works() {
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-justify md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showGrowthclub ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -162,7 +162,7 @@ export default function Works() {
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-justify md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showMovibox ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >

@@ -70,7 +70,7 @@ function Description() {
                             <h1 className="sm:text-[2rem] md:text-[3.3rem] sm:ml-0 sm:mt-12 font-semibold mt-5 md:mt-[6rem] md:ml-2 text-[1.9rem] ">Hi, I'm Rotimi Babalola.</h1>
                             <h1 className="inline-block sm:text-[2rem] md:text-[3.3rem] sm:inline-block sm:mt-1 font-semibold md:mt-[-0.3rem] md:inline-block md:ml-2 text-[1.7rem] mt-0">UX Designer</h1>
                             <h1 className="inline-block sm:text-[2rem] md:text-[3.3rem] sm:inline-block sm:ml-2 sm:mt-1 font-semibold md:mt-[-0.3rem] md:inline-block md:ml-2 ml-2 text-[1.7rem] mt-0">and Developer.</h1>
-                            <p className="text-[1.2rem] sm:mt-4 w-[22rem] mt-3 sm:w-[35rem] md:w-[53.5rem] md:ml-2 text-justify transition-transform duration-[2s] transform">
+                            <p className="text-[1.2rem] sm:mt-4 w-[22rem] mt-3 sm:w-[35rem] md:w-[53.5rem] md:ml-2 text-start">
                                 I design, create, maintain websites using programming languages, frameworks, and tools.
                                 I build interactive websites that can be accessible by clients &
                                 users from anywhere around the world.
