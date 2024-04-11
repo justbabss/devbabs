@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Description from './description';
 import Nav from './nav';
+import Works from './works';
 
 function App() {
   // Initialize state with the value from local storage if it exists, otherwise default to false
@@ -29,11 +30,20 @@ function App() {
 
   return (
     <>
-      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w-full scroll-smooth h-screen overflow-auto px-2 pt-5 sm:px-7 sm:py-5 md:px-12 md:overflow-hidden`}>
+      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w-full scroll-smooth h-screen px-2 pt-5 sm:px-7 sm:py-12 md:px-12`}>
         <div onClick={toggleDarkMode}><Nav/></div>
         <div className={`${darkMode ? 'text-white' : 'text-black'}`}>
           <Description />
         </div>
+      </section>
+
+      <section className={`${darkMode ? 'bg-black' : 'bg-white'} text-${darkMode ? 'white' : 'black'} w-full scroll-smooth px-2 pt-5 sm:px-7 sm:py-12 md:px-12`}>
+        <div className={`${darkMode ? 'bg-black' : 'bg-white'}`}>
+          <Works />
+        </div>
+        <div className=" text-center h-[3em] mt-5 sm:mt-16">
+        <p className="text-[1.2rem] font-normal">@ 2024 Rotimi Babalola</p> 
+    </div>
       </section>
     </>
   );
