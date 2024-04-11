@@ -60,7 +60,7 @@ function Description() {
         <main
             ref={mainRef}
             className={`transition-transform duration-[5s] transform ${
-                show ? 'translate-x-0' : '-translate-x-full'
+                show ? 'translate-y-0' : 'translate-y-full'
             }`}
         >
             {show && (
@@ -70,7 +70,7 @@ function Description() {
                             <h1 className="sm:text-[2rem] md:text-[3.3rem] sm:ml-0 sm:mt-12 font-semibold mt-5 md:mt-[6rem] md:ml-2 text-[1.9rem] ">Hi, I'm Rotimi Babalola.</h1>
                             <h1 className="inline-block sm:text-[2rem] md:text-[3.3rem] sm:inline-block sm:mt-1 font-semibold md:mt-[-0.3rem] md:inline-block md:ml-2 text-[1.7rem] mt-0">UX Designer</h1>
                             <h1 className="inline-block sm:text-[2rem] md:text-[3.3rem] sm:inline-block sm:ml-2 sm:mt-1 font-semibold md:mt-[-0.3rem] md:inline-block md:ml-2 ml-2 text-[1.7rem] mt-0">and Developer.</h1>
-                            <p className="text-[1.2rem] sm:mt-4 w-[22rem] mt-3 sm:w-[35rem] md:w-[53.5rem] md:ml-2 text-justify">
+                            <p className="text-[1.2rem] sm:mt-4 w-[22rem] mt-3 sm:w-[35rem] md:w-[53.5rem] md:ml-2 text-justify transition-transform duration-[2s] transform">
                                 I design, create, maintain websites using programming languages, frameworks, and tools.
                                 I build interactive websites that can be accessible by clients &
                                 users from anywhere around the world.
@@ -111,7 +111,7 @@ function Description() {
                     </section>
 
                     <button 
-                        className={`${darkMode ? 'border-white' : 'border-black'} border-2 border-black text-[1.3rem] mt-[1.5rem] md:mt-10 md:ml-2 p-2 sm:mt-[14rem] transition-transform hover:scale-110`}
+                        className={`${darkMode ? 'border-white' : 'border-black'} border-2 border-black text-[1.3rem] mt-[1.5rem] md:mt-10 md:ml-2 p-2 sm:mt-[17rem] transition-transform hover:scale-110`}
                         onClick={toggleDarkMode}
                     >
                         <a href={cv} download>Download CV</a>
