@@ -91,7 +91,7 @@ export default function Works() {
 
     return (
         <main className="">
-            <div className=" mt-[11rem] md:mt-[0rem]">
+            <div className=" mt-[22.5rem] md:mt-[0rem]">
                 <div className=" flex flex-col justify-between md:mt-0 mt-10 gap-7 md:flex-row">
                     <img
                         ref={mainRefMhi}
