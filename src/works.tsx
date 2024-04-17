@@ -4,16 +4,19 @@ import Mhi from './assets/images/mhi.png';
 import Geekops from './assets/images/Geekops.png';
 import Growthclub from './assets/images/Growthclub.png';
 import Movibox from './assets/images/Moviebox.png';
+import Trombone from './assets/images/Trombones.png'
 
 export default function Works() {
     const [showMhi, setShowMhi] = useState(false);
     const [showGeekops, setShowGeekops] = useState(false);
     const [showGrowthclub, setShowGrowthclub] = useState(false);
     const [showMovibox, setShowMovibox] = useState(false);
+    const [showTrombone, setShowTrombone] = useState(false);
     const mainRefMhi = useRef(null);
     const mainRefGeekops = useRef(null);
     const mainRefGrowthclub = useRef(null);
     const mainRefMovibox = useRef(null);
+    const mainRefTrombone = useRef(null);
 
     useEffect(() => {
         const observerMhi = new IntersectionObserver((entries) => {
@@ -64,27 +67,41 @@ export default function Works() {
             observerMovibox.observe(mainRefMovibox.current);
         }
 
+        const observerTrombone = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setShowTrombone(true);
+                    observerTrombone.unobserve(entry.target);
+                }
+            });
+        });
+        if (mainRefTrombone.current) {
+            observerTrombone.observe(mainRefTrombone.current);
+        }
+
         return () => {
             observerMhi.disconnect();
             observerGeekops.disconnect();
             observerGrowthclub.disconnect();
             observerMovibox.disconnect();
+            observerTrombone.disconnect();
+    
         };
     }, []);
 
     return (
         <main className="">
-            <div className=" mt-[23rem] md:mt-[0rem]">
+            <div className=" mt-[11rem] md:mt-[0rem]">
                 <div className=" flex flex-col justify-between md:mt-0 mt-10 gap-7 md:flex-row">
                     <img
                         ref={mainRefMhi}
-                        className={`transition-transform duration-[5s] transform w-[38rem] ${showMhi ? '-translate-x-0' : '-translate-x-full'
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showMhi ? '-translate-x-0' : '-translate-x-full'
                             }`}
                         src={Mhi}
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showMhi ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -104,13 +121,13 @@ export default function Works() {
                 <div className=" flex flex-col justify-between md:mt-16 mt-10 gap-7 md:flex-row">
                     <img
                         ref={mainRefGeekops}
-                        className={`transition-transform duration-[5s] transform w-[38rem] ${showGeekops ? '-translate-x-0' : '-translate-x-full'
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showGeekops ? '-translate-x-0' : '-translate-x-full'
                             }`}
                         src={Geekops}
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showGeekops ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -130,13 +147,13 @@ export default function Works() {
                 <div className=" flex flex-col justify-between md:mt-16 mt-10 gap-7 md:flex-row">
                     <img
                         ref={mainRefGrowthclub}
-                        className={`transition-transform duration-[5s] transform w-[38rem] ${showGrowthclub ? '-translate-x-0' : '-translate-x-full'
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showGrowthclub ? '-translate-x-0' : '-translate-x-full'
                             }`}
                         src={Growthclub}
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showGrowthclub ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -156,13 +173,13 @@ export default function Works() {
                 <div className=" flex flex-col justify-between md:mt-16 mt-10 gap-7 md:flex-row">
                     <img
                         ref={mainRefMovibox}
-                        className={`transition-transform duration-[5s] transform w-[38rem] ${showMovibox ? '-translate-x-0' : '-translate-x-full'
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showMovibox ? '-translate-x-0' : '-translate-x-full'
                             }`}
                         src={Movibox}
                         alt=""
                     />
                     <p
-                        className={`transition-transform duration-[5s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
                             showMovibox ? 'translate-x-0' : 'translate-x-full'
                             }`}
                     >
@@ -175,6 +192,37 @@ export default function Works() {
 
                                 <div className=" flex justify-start gap-24 mt-5">
                                     <a href="https://hng-task-2-five.vercel.app/" target='_blank'><button className=" border-2 border-[#71797E] p-2">View Webiste</button></a>
+                                </div>
+                            </>
+                        )}
+                    </p>
+                </div>
+
+                <div className=" flex flex-col justify-between md:mt-16 mt-10 gap-7 md:flex-row">
+                    <img
+                        ref={mainRefTrombone}
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showTrombone ? '-translate-x-0' : '-translate-x-full'
+                            }`}
+                        src={Trombone}
+                        alt=""
+                    />
+                    <p
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                            showTrombone ? 'translate-x-0' : 'translate-x-full'
+                            }`}
+                    >
+                        {showTrombone && (
+                            <>
+                            Original Trombones is a website showcasing handcrafted, home-made trombones. 
+                            The site highlights the premium materials used in the trombones, sourced locally for increased longevity. 
+                            Original Trombones offers fast shipping to ensure customers receive their instruments promptly upon completion. 
+                            Additionally, the site provides quality assurance for every purchase, ensuring there are no damages or faults and checking and testing the pitch of each instrument. 
+                            The website features various trombone categories, each with a description and price. Customers can easily select their desired trombone and make a purchase. Overall, 
+                            Original Trombones emphasizes quality, craftsmanship, and customer satisfaction.
+
+
+                                <div className=" flex justify-start gap-24 mt-5">
+                                    <a href="https://trombones.vercel.app/" target='_blank'><button className=" border-2 border-[#71797E] p-2">View Webiste</button></a>
                                 </div>
                             </>
                         )}

@@ -59,7 +59,7 @@ function Description() {
     return (
         <main
             ref={mainRef}
-            className={`transition-transform duration-[5s] transform ${
+            className={`transition-transform duration-[2s] transform ${
                 show ? 'translate-y-0' : 'translate-y-full'
             }`}
         >
