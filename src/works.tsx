@@ -5,6 +5,7 @@ import Geekops from './assets/images/Geekops.png';
 import Growthclub from './assets/images/Growthclub.png';
 import Movibox from './assets/images/Moviebox.png';
 import Trombone from './assets/images/Trombones.png'
+import spring from './assets/images/Spring.png'
 
 export default function Works() {
     const [showMhi, setShowMhi] = useState(false);
@@ -12,11 +13,13 @@ export default function Works() {
     const [showGrowthclub, setShowGrowthclub] = useState(false);
     const [showMovibox, setShowMovibox] = useState(false);
     const [showTrombone, setShowTrombone] = useState(false);
+    const [showSpring, setShowSpring] = useState(false);
     const mainRefMhi = useRef(null);
     const mainRefGeekops = useRef(null);
     const mainRefGrowthclub = useRef(null);
     const mainRefMovibox = useRef(null);
     const mainRefTrombone = useRef(null);
+    const mainRefSpring = useRef(null);
 
     useEffect(() => {
         const observerMhi = new IntersectionObserver((entries) => {
@@ -79,12 +82,26 @@ export default function Works() {
             observerTrombone.observe(mainRefTrombone.current);
         }
 
+        const observerSpring = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setShowSpring(true);
+                    observerSpring.unobserve(entry.target);
+                }
+            });
+        });
+        if (mainRefSpring.current) {
+            observerSpring.observe(mainRefSpring.current);
+        }
+
+
         return () => {
             observerMhi.disconnect();
             observerGeekops.disconnect();
             observerGrowthclub.disconnect();
             observerMovibox.disconnect();
             observerTrombone.disconnect();
+            observerSpring.disconnect();
     
         };
     }, []);
@@ -223,6 +240,31 @@ export default function Works() {
 
                                 <div className=" flex justify-start gap-24 mt-5">
                                     <a href="https://trombones.vercel.app/" target='_blank'><button className=" border-2 border-[#71797E] p-2">View Webiste</button></a>
+                                </div>
+                            </>
+                        )}
+                    </p>
+                </div>
+
+                <div className=" flex flex-col justify-between md:mt-16 mt-10 gap-7 md:flex-row">
+                    <img
+                        ref={mainRefSpring}
+                        className={`transition-transform duration-[2s] transform w-[38rem] ${showSpring ? '-translate-x-0' : '-translate-x-full'
+                            }`}
+                        src={spring}
+                        alt=""
+                    />
+                    <p
+                        className={`transition-transform duration-[2s] transform text-start md:ml-6 font-light md:text-[1.2rem] ${
+                            showSpring ? 'translate-x-0' : 'translate-x-full'
+                            }`}
+                    >
+                        {showSpring && (
+                            <>
+                            Spring is a powerful and comprehensive framework for building Java applications. It provides a wide range of features and functionalities to simplify and streamline the development process. Spring's core principle is dependency injection, which helps manage object dependencies and promotes loose coupling. It also offers support for aspect-oriented programming, allowing developers to separate cross-cutting concerns from the main application logic. Additionally, Spring provides robust support for data access, transaction management, security, and more. Its modular architecture allows developers to use only the components they need, making it highly flexible and adaptable to various project requirements.
+
+                                <div className=" flex justify-start gap-24 mt-5">
+                                    <a href="https://springdev.vercel.app" target='_blank'><button className=" border-2 border-[#71797E] p-2">View Webiste</button></a>
                                 </div>
                             </>
                         )}
